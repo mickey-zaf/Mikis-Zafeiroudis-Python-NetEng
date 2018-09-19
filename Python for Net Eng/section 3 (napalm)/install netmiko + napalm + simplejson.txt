@@ -1,0 +1,571 @@
+root@NetworkAutomation-1:~# apt-get update
+Get:1 http://security.ubuntu.com/ubuntu xenial-security InRelease [107 kB]
+Get:2 http://ppa.launchpad.net/ansible/ansible-2.5/ubuntu xenial InRelease [18.0 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial InRelease [247 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+Get:6 http://ppa.launchpad.net/ansible/ansible-2.5/ubuntu xenial/main amd64 Packages [469 B]
+Get:7 http://security.ubuntu.com/ubuntu xenial-security/universe Sources [90.8 kB]
+Get:8 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [707 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial/universe Sources [9802 kB]
+Get:10 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [12.7 kB]
+Get:11 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [468 kB]
+Get:12 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [3748 B]
+Get:13 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages [1558 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages [14.1 kB]
+Get:15 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [9827 kB]
+Get:16 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [176 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/universe Sources [278 kB]
+Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [1097 kB]
+Get:19 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [13.1 kB]
+Get:20 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [879 kB]
+Get:21 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [18.8 kB]
+Get:22 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [7343 B]
+Get:23 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [8086 B]
+Fetched 25.5 MB in 28s (903 kB/s)
+Reading package lists... Done
+root@NetworkAutomation-1:~# apt-get install python3-pip
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+python3-pip is already the newest version (8.1.1-2ubuntu0.4).
+0 upgraded, 0 newly installed, 0 to remove and 55 not upgraded.
+root@NetworkAutomation-1:~# apt-get install python3-dev
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libpython3-dev libpython3.5 libpython3.5-dev python3.5-dev
+The following NEW packages will be installed:
+  libpython3-dev libpython3.5 libpython3.5-dev python3-dev python3.5-dev
+0 upgraded, 5 newly installed, 0 to remove and 55 not upgraded.
+Need to get 39.1 MB of archives.
+After this operation, 58.6 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython3.5 amd64 3.5.2-2ubuntu0~16.04.4 [1360 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython3.5-dev amd64 3.5.2-2ubuntu0~16.04.4 [37.3 MB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpython3-dev amd64 3.5.1-3 [6926 B]
+Get:4 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python3.5-dev amd64 3.5.2-2ubuntu0~16.04.4 [413 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial/main amd64 python3-dev amd64 3.5.1-3 [1186 B]
+Fetched 39.1 MB in 43s (905 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libpython3.5:amd64.
+(Reading database ... 17048 files and directories currently installed.)
+Preparing to unpack .../libpython3.5_3.5.2-2ubuntu0~16.04.4_amd64.deb ...
+Unpacking libpython3.5:amd64 (3.5.2-2ubuntu0~16.04.4) ...
+Selecting previously unselected package libpython3.5-dev:amd64.
+Preparing to unpack .../libpython3.5-dev_3.5.2-2ubuntu0~16.04.4_amd64.deb ...
+Unpacking libpython3.5-dev:amd64 (3.5.2-2ubuntu0~16.04.4) ...
+Selecting previously unselected package libpython3-dev:amd64.
+Preparing to unpack .../libpython3-dev_3.5.1-3_amd64.deb ...
+Unpacking libpython3-dev:amd64 (3.5.1-3) ...
+Selecting previously unselected package python3.5-dev.
+Preparing to unpack .../python3.5-dev_3.5.2-2ubuntu0~16.04.4_amd64.deb ...
+Unpacking python3.5-dev (3.5.2-2ubuntu0~16.04.4) ...
+Selecting previously unselected package python3-dev.
+Preparing to unpack .../python3-dev_3.5.1-3_amd64.deb ...
+Unpacking python3-dev (3.5.1-3) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up libpython3.5:amd64 (3.5.2-2ubuntu0~16.04.4) ...
+Setting up libpython3.5-dev:amd64 (3.5.2-2ubuntu0~16.04.4) ...
+Setting up libpython3-dev:amd64 (3.5.1-3) ...
+Setting up python3.5-dev (3.5.2-2ubuntu0~16.04.4) ...
+Setting up python3-dev (3.5.1-3) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+root@NetworkAutomation-1:~# pip3 install -U netmiko
+Collecting netmiko
+  Downloading https://files.pythonhosted.org/packages/1c/82/9aef0c1b4fca782fd18bee44c9ed18404060f1c04ecbf1386594f5f41834/netmiko-2.2.2.tar.gz (76kB)
+    100% |################################| 81kB 386kB/s
+Collecting paramiko>=2.0.0 (from netmiko)
+  Downloading https://files.pythonhosted.org/packages/3e/db/cb7b6656e0e7387637ce850689084dc0b94b44df31cc52e5fc5c2c4fd2c1/paramiko-2.4.1-py2.py3-none-any.whl (194kB)
+    100% |################################| 194kB 353kB/s
+Collecting scp>=0.10.0 (from netmiko)
+  Downloading https://files.pythonhosted.org/packages/ef/8c/399c5ddffc8c1bd2593ee6c8937ed31f005dcfa0c591da149f7b4b993f14/scp-0.11.0-py2.py3-none-any.whl
+Collecting pyyaml (from netmiko)
+  Downloading https://files.pythonhosted.org/packages/9e/a3/1d13970c3f36777c583f136c136f804d70f500168edc1edea6daa7200769/PyYAML-3.13.tar.gz (270kB)
+    100% |################################| 276kB 877kB/s
+Collecting pyserial (from netmiko)
+  Downloading https://files.pythonhosted.org/packages/0d/e4/2a744dd9e3be04a0c0907414e2a01a7c88bb3915cbe3c8cc06e209f59c30/pyserial-3.4-py2.py3-none-any.whl (193kB)
+    100% |################################| 194kB 1.1MB/s
+Collecting textfsm (from netmiko)
+  Downloading https://files.pythonhosted.org/packages/a1/0d/a1b490503545b3b4600b965eae5d44cc2b6ce27cfb44f4debc563dbb56d3/textfsm-0.4.1.tar.gz
+Collecting bcrypt>=3.1.3 (from paramiko>=2.0.0->netmiko)
+  Downloading https://files.pythonhosted.org/packages/72/8d/57da727cbb4ddf0295b0665a93bd8f46fbbd2a48b76cbb0896ca7d27301f/bcrypt-3.1.4-cp35-cp35m-manylinux1_x86_64.whl (54kB)
+    100% |################################| 61kB 1.5MB/s
+Collecting pynacl>=1.0.1 (from paramiko>=2.0.0->netmiko)
+  Downloading https://files.pythonhosted.org/packages/c9/9c/c8d4ae0f590faded4af55381131ad4db8729214eba6537c520622ba3548a/PyNaCl-1.2.1-cp35-cp35m-manylinux1_x86_64.whl (692kB)
+    100% |################################| 696kB 566kB/s
+Collecting cryptography>=1.5 (from paramiko>=2.0.0->netmiko)
+  Downloading https://files.pythonhosted.org/packages/22/21/233e38f74188db94e8451ef6385754a98f3cad9b59bedf3a8e8b14988be4/cryptography-2.3.1.tar.gz (449kB)
+    100% |################################| 450kB 506kB/s
+Collecting pyasn1>=0.1.7 (from paramiko>=2.0.0->netmiko)
+  Downloading https://files.pythonhosted.org/packages/d1/a1/7790cc85db38daa874f6a2e6308131b9953feb1367f2ae2d1123bb93a9f5/pyasn1-0.4.4-py2.py3-none-any.whl (72kB)
+    100% |################################| 81kB 729kB/s
+Collecting cffi>=1.1 (from bcrypt>=3.1.3->paramiko>=2.0.0->netmiko)
+  Downloading https://files.pythonhosted.org/packages/59/cc/0e1635b4951021ef35f5c92b32c865ae605fac2a19d724fb6ff99d745c81/cffi-1.11.5-cp35-cp35m-manylinux1_x86_64.whl (420kB)
+    100% |################################| 430kB 694kB/s
+Collecting six>=1.4.1 (from bcrypt>=3.1.3->paramiko>=2.0.0->netmiko)
+  Downloading https://files.pythonhosted.org/packages/67/4b/141a581104b1f6397bfa78ac9d43d8ad29a7ca43ea90a2d863fe3056e86a/six-1.11.0-py2.py3-none-any.whl
+Collecting idna>=2.1 (from cryptography>=1.5->paramiko>=2.0.0->netmiko)
+  Downloading https://files.pythonhosted.org/packages/4b/2a/0276479a4b3caeb8a8c1af2f8e4355746a97fab05a372e4a2c6a6b876165/idna-2.7-py2.py3-none-any.whl (58kB)
+    100% |################################| 61kB 940kB/s
+Collecting asn1crypto>=0.21.0 (from cryptography>=1.5->paramiko>=2.0.0->netmiko)
+  Downloading https://files.pythonhosted.org/packages/ea/cd/35485615f45f30a510576f1a56d1e0a7ad7bd8ab5ed7cdc600ef7cd06222/asn1crypto-0.24.0-py2.py3-none-any.whl (101kB)
+    100% |################################| 102kB 1.1MB/s
+Collecting pycparser (from cffi>=1.1->bcrypt>=3.1.3->paramiko>=2.0.0->netmiko)
+  Downloading https://files.pythonhosted.org/packages/8c/2d/aad7f16146f4197a11f8e91fb81df177adcc2073d36a17b1491fd09df6ed/pycparser-2.18.tar.gz (245kB)
+    100% |################################| 256kB 971kB/s
+Building wheels for collected packages: netmiko, pyyaml, textfsm, cryptography, pycparser
+  Running setup.py bdist_wheel for netmiko ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-rela6aai/netmiko/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" bdist_wheel -d /tmp/tmpdjkazndmpip-wheel- --python-tag cp35:
+  /usr/lib/python3.5/distutils/dist.py:261: UserWarning: Unknown distribution option: 'long_description_content_type'
+    warnings.warn(msg)
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for netmiko
+  Running setup.py clean for netmiko
+  Running setup.py bdist_wheel for pyyaml ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-rela6aai/pyyaml/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" bdist_wheel -d /tmp/tmpjsymid2wpip-wheel- --python-tag cp35:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for pyyaml
+  Running setup.py clean for pyyaml
+  Running setup.py bdist_wheel for textfsm ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-rela6aai/textfsm/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" bdist_wheel -d /tmp/tmp3c_u25wgpip-wheel- --python-tag cp35:
+  /usr/lib/python3.5/distutils/dist.py:261: UserWarning: Unknown distribution option: 'long_description_content_type'
+    warnings.warn(msg)
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for textfsm
+  Running setup.py clean for textfsm
+  Running setup.py bdist_wheel for cryptography ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-rela6aai/cryptography/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" bdist_wheel -d /tmp/tmp4z20a5scpip-wheel- --python-tag cp35:
+
+  Installed /tmp/pip-build-rela6aai/cryptography/.eggs/cffi-1.11.5-py3.5-linux-x86_64.egg
+  Searching for pycparser
+  Reading https://pypi.python.org/simple/pycparser/
+  Best match: pycparser 2.18
+  Downloading https://files.pythonhosted.org/packages/8c/2d/aad7f16146f4197a11f8e91fb81df177adcc2073d36a17b1491fd09df6ed/pycparser-2.18.tar.gz#sha256=99a8ca03e29851d96616ad0404b4aad7d9ee16f25c9f9708a11faf2810f7b226
+  Processing pycparser-2.18.tar.gz
+  Writing /tmp/easy_install-5vo_b5ik/pycparser-2.18/setup.cfg
+  Running pycparser-2.18/setup.py -q bdist_egg --dist-dir /tmp/easy_install-5vo_b5ik/pycparser-2.18/egg-dist-tmp-faw8agmy
+  warning: no previously-included files matching 'yacctab.*' found under directory 'tests'
+  warning: no previously-included files matching 'lextab.*' found under directory 'tests'
+  warning: no previously-included files matching 'yacctab.*' found under directory 'examples'
+  warning: no previously-included files matching 'lextab.*' found under directory 'examples'
+  zip_safe flag not set; analyzing archive contents...
+  pycparser.ply.__pycache__.ygen.cpython-35: module references __file__
+  pycparser.ply.__pycache__.lex.cpython-35: module references __file__
+  pycparser.ply.__pycache__.lex.cpython-35: module MAY be using inspect.getsourcefile
+  pycparser.ply.__pycache__.yacc.cpython-35: module references __file__
+  pycparser.ply.__pycache__.yacc.cpython-35: module MAY be using inspect.getsourcefile
+  pycparser.ply.__pycache__.yacc.cpython-35: module MAY be using inspect.stack
+  creating /tmp/pip-build-rela6aai/cryptography/.eggs/pycparser-2.18-py3.5.egg
+  Extracting pycparser-2.18-py3.5.egg to /tmp/pip-build-rela6aai/cryptography/.eggs
+
+  Installed /tmp/pip-build-rela6aai/cryptography/.eggs/pycparser-2.18-py3.5.egg
+  /usr/lib/python3.5/distutils/dist.py:261: UserWarning: Unknown distribution option: 'python_requires'
+    warnings.warn(msg)
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for cryptography
+  Running setup.py clean for cryptography
+  Running setup.py bdist_wheel for pycparser ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-rela6aai/pycparser/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" bdist_wheel -d /tmp/tmpm2gh_db0pip-wheel- --python-tag cp35:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for pycparser
+  Running setup.py clean for pycparser
+Failed to build netmiko pyyaml textfsm cryptography pycparser
+Installing collected packages: pycparser, cffi, six, bcrypt, pynacl, idna, asn1crypto, cryptography, pyasn1, paramiko, scp, pyyaml, pyserial, textfsm, netmiko
+  Running setup.py install for pycparser ... done
+  Running setup.py install for cryptography ... done
+  Running setup.py install for pyyaml ... done
+  Running setup.py install for textfsm ... done
+  Running setup.py install for netmiko ... done
+Successfully installed asn1crypto-0.24.0 bcrypt-3.1.4 cffi-1.11.5 cryptography-2.3.1 idna-2.7 netmiko-2.2.2 paramiko-2.4.1 pyasn1-0.4.4 pycparser-2.18 pynacl-1.2.1 pyserial-3.4 pyyaml-3.13 scp-0.11.0 six-1.11.0 textfsm-0.4.1
+You are using pip version 8.1.1, however version 18.0 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+root@NetworkAutomation-1:~#
+root@NetworkAutomation-1:~# cat > netmiko1.py
+# From netmiko module import ConnectHandler
+from netmiko import ConnectHandler
+
+# Create a variable that contains a python Dictionary with 4 keys
+iosv_l2 = {
+        'device_type': 'cisco_ios',
+        'ip': '192.168.122.72',
+        'username': 'cisco',
+        'password': 'cisco',
+}
+
+# The ** means that the argument is a dictionary
+# One * would mean that the argument is a list
+# The ConnectHandler will SSH to the device
+net_connect = ConnectHandler(**iosv_l2)
+
+# To view something from the remote device over SSH
+# Netmiko 'send_command' method to send a 'show' command to the remote device and print the output
+output = net_connect.send_command('show ip int brief')
+print (output)
+
+# To configure something to the remote device over SSH:
+# A variable that contains a list
+# Send the 2 commands and print the output
+# 'send_config_set' is a Netmiko method to send configuration commands
+config_commands = ['int loop 0', 'ip address 1.1.1.1 255.255.255.255']
+output = net_connect.send_config_set(config_commands)
+print (output)
+
+# Here I use a loop to create 2 VLANs
+# The Netmiko 'send_config_set' method sends the commands over SSH:
+for n in range (2,6):
+        print ("Creating VLAN " + str(n))
+        config_commands = ['vlan ' + str(n), 'name Python_VLAN ' + str(n)]
+        output = net_connect.send_config_set(config_commands)
+        print (output)
+
+
+root@NetworkAutomation-1:~#
+root@NetworkAutomation-1:~# python3 netmiko1.py
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                192.168.122.72  YES manual up                    up
+Ethernet0/1                unassigned      YES NVRAM  administratively down down
+Ethernet0/2                unassigned      YES NVRAM  administratively down down
+Ethernet0/3                unassigned      YES NVRAM  administratively down down
+Ethernet1/0                unassigned      YES NVRAM  administratively down down
+Ethernet1/1                unassigned      YES NVRAM  administratively down down
+Ethernet1/2                unassigned      YES NVRAM  administratively down down
+Ethernet1/3                unassigned      YES NVRAM  administratively down down
+Serial2/0                  unassigned      YES NVRAM  administratively down down
+Serial2/1                  unassigned      YES NVRAM  administratively down down
+Serial2/2                  unassigned      YES NVRAM  administratively down down
+Serial2/3                  unassigned      YES NVRAM  administratively down down
+Serial3/0                  unassigned      YES NVRAM  administratively down down
+Serial3/1                  unassigned      YES NVRAM  administratively down down
+Serial3/2                  unassigned      YES NVRAM  administratively down down
+Serial3/3                  unassigned      YES NVRAM  administratively down down
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#int loop 0
+R1(config-if)#ip address 1.1.1.1 255.255.255.255
+R1(config-if)#end
+R1#
+Creating VLAN 2
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#vlan 2
+                ^
+% Invalid input detected at '^' marker.
+
+R1(config)#name Python_VLAN 2
+             ^
+% Invalid input detected at '^' marker.
+
+R1(config)#end
+R1#
+Creating VLAN 3
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#vlan 3
+                ^
+% Invalid input detected at '^' marker.
+
+R1(config)#name Python_VLAN 3
+             ^
+% Invalid input detected at '^' marker.
+
+R1(config)#end
+R1#
+Creating VLAN 4
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#vlan 4
+                ^
+% Invalid input detected at '^' marker.
+
+R1(config)#name Python_VLAN 4
+             ^
+% Invalid input detected at '^' marker.
+
+R1(config)#end
+R1#
+Creating VLAN 5
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#vlan 5
+                ^
+% Invalid input detected at '^' marker.
+
+R1(config)#name Python_VLAN 5
+             ^
+% Invalid input detected at '^' marker.
+
+R1(config)#end
+R1#
+root@NetworkAutomation-1:~#
+root@NetworkAutomation-1:~#
+root@NetworkAutomation-1:~# cat > netmiko-test.py
+# From netmiko module import ConnectHandler
+from netmiko import ConnectHandler
+
+# Create a variable that contains a python Dictionary with 4 keys
+iosv_l2 = {
+        'device_type': 'cisco_ios',
+        'ip': '192.168.122.72',
+        'username': 'cisco',
+        'password': 'cisco',
+}
+
+# The ** means that the argument is a dictionary
+# One * would mean that the argument is a list
+# The ConnectHandler will SSH to the device
+net_connect = ConnectHandler(**iosv_l2)
+
+# To view something from the remote device over SSH
+# Netmiko 'send_command' method to send a 'show' command to the remote device and print the output
+output = net_connect.send_command('show ip int brief')
+print (output)
+
+
+root@NetworkAutomation-1:~#
+root@NetworkAutomation-1:~#
+root@NetworkAutomation-1:~# python3 netmiko-test.py
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                192.168.122.72  YES manual up                    up
+Ethernet0/1                unassigned      YES NVRAM  administratively down down
+Ethernet0/2                unassigned      YES NVRAM  administratively down down
+Ethernet0/3                unassigned      YES NVRAM  administratively down down
+Ethernet1/0                unassigned      YES NVRAM  administratively down down
+Ethernet1/1                unassigned      YES NVRAM  administratively down down
+Ethernet1/2                unassigned      YES NVRAM  administratively down down
+Ethernet1/3                unassigned      YES NVRAM  administratively down down
+Serial2/0                  unassigned      YES NVRAM  administratively down down
+Serial2/1                  unassigned      YES NVRAM  administratively down down
+Serial2/2                  unassigned      YES NVRAM  administratively down down
+Serial2/3                  unassigned      YES NVRAM  administratively down down
+Serial3/0                  unassigned      YES NVRAM  administratively down down
+Serial3/1                  unassigned      YES NVRAM  administratively down down
+Serial3/2                  unassigned      YES NVRAM  administratively down down
+Serial3/3                  unassigned      YES NVRAM  administratively down down
+Loopback0                  1.1.1.1         YES manual up                    up
+root@NetworkAutomation-1:~# pip3 install -U napalm
+Collecting napalm
+  Downloading https://files.pythonhosted.org/packages/5f/39/da646ec49c2f99b153ebeff3a764b4f59e02a38650f1b638bde23966f58f/napalm-2.3.2.tar.gz (152kB)
+    100% |################################| 153kB 1.5MB/s
+Collecting setuptools>=38.4.0 (from napalm)
+  Downloading https://files.pythonhosted.org/packages/66/e8/570bb5ca88a8bcd2a1db9c6246bb66615750663ffaaeada95b04ffe74e12/setuptools-40.2.0-py2.py3-none-any.whl (568kB)
+    100% |################################| 573kB 503kB/s
+Requirement already up-to-date: cffi>=1.11.3 in /usr/local/lib/python3.5/dist-packages (from napalm)
+Collecting future (from napalm)
+  Downloading https://files.pythonhosted.org/packages/00/2b/8d082ddfed935f3608cc61140df6dcbf0edea1bc3ab52fb6c29ae3e81e85/future-0.16.0.tar.gz (824kB)
+    100% |################################| 829kB 490kB/s
+Requirement already up-to-date: textfsm in /usr/local/lib/python3.5/dist-packages (from napalm)
+Collecting jinja2 (from napalm)
+  Downloading https://files.pythonhosted.org/packages/7f/ff/ae64bacdfc95f27a016a7bed8e8686763ba4d277a78ca76f32659220a731/Jinja2-2.10-py2.py3-none-any.whl (126kB)
+    100% |################################| 133kB 1.1MB/s
+Collecting netaddr (from napalm)
+  Downloading https://files.pythonhosted.org/packages/ba/97/ce14451a9fd7bdb5a397abf99b24a1a6bb7a1a440b019bebd2e9a0dbec74/netaddr-0.7.19-py2.py3-none-any.whl (1.6MB)
+    100% |################################| 1.6MB 325kB/s
+Requirement already up-to-date: pyYAML in /usr/local/lib/python3.5/dist-packages (from napalm)
+Collecting pyeapi (from napalm)
+  Downloading https://files.pythonhosted.org/packages/bb/03/58f8bc4ba77ee33fd762fa50915a20304179fa2613827318baf2a08a327e/pyeapi-0.8.2.tar.gz (133kB)
+    100% |################################| 143kB 1.2MB/s
+Requirement already up-to-date: netmiko>=2.1.1 in /usr/local/lib/python3.5/dist-packages (from napalm)
+Collecting pyIOSXR>=0.53 (from napalm)
+  Downloading https://files.pythonhosted.org/packages/fd/86/0f0a45ba27d7c4fb8cf85e09cd2368060f7bb4642ef193edfb8942a027b6/pyIOSXR-0.53.tar.gz
+Collecting junos-eznc>=2.1.5 (from napalm)
+  Downloading https://files.pythonhosted.org/packages/00/b5/3d6d2d572789421b71d2bd7e3bae843db504cad59415bf817c7b9075aad6/junos_eznc-2.2.0-py2.py3-none-any.whl (155kB)
+    100% |################################| 163kB 1.0MB/s
+Collecting pynxos==0.0.3 (from napalm)
+  Downloading https://files.pythonhosted.org/packages/1c/b1/f84ab972db89b9ec4ca8e1a0f05050e46de0670d369cdf45f13bcfa03b40/pynxos-0.0.3.tar.gz
+Requirement already up-to-date: scp in /usr/local/lib/python3.5/dist-packages (from napalm)
+Requirement already up-to-date: pycparser in /usr/local/lib/python3.5/dist-packages (from cffi>=1.11.3->napalm)
+Collecting MarkupSafe>=0.23 (from jinja2->napalm)
+  Downloading https://files.pythonhosted.org/packages/4d/de/32d741db316d8fdb7680822dd37001ef7a448255de9699ab4bfcbdf4172b/MarkupSafe-1.0.tar.gz
+Requirement already up-to-date: paramiko>=2.0.0 in /usr/local/lib/python3.5/dist-packages (from netmiko>=2.1.1->napalm)
+Requirement already up-to-date: pyserial in /usr/local/lib/python3.5/dist-packages (from netmiko>=2.1.1->napalm)
+Collecting lxml>=3.2.4 (from pyIOSXR>=0.53->napalm)
+  Downloading https://files.pythonhosted.org/packages/eb/e2/02d18a1b3021b65409dd860f91cf0d68d79900f172bb3cc93cff21c3c951/lxml-4.2.5-cp35-cp35m-manylinux1_x86_64.whl (5.8MB)
+    100% |################################| 5.8MB 87kB/s
+Collecting ncclient>=0.5.4 (from junos-eznc>=2.1.5->napalm)
+  Downloading https://files.pythonhosted.org/packages/4b/4d/e42c3617f4be41d91ce59f60735892c95fceff6e3fdcf648a12532a264da/ncclient-0.6.2.tar.gz (85kB)
+    100% |################################| 92kB 1.3MB/s
+Requirement already up-to-date: six in /usr/local/lib/python3.5/dist-packages (from junos-eznc>=2.1.5->napalm)
+Collecting requests>=2.7.0 (from pynxos==0.0.3->napalm)
+  Downloading https://files.pythonhosted.org/packages/65/47/7e02164a2a3db50ed6d8a6ab1d6d60b69c4c3fdf57a284257925dfc12bda/requests-2.19.1-py2.py3-none-any.whl (91kB)
+    100% |################################| 92kB 1.1MB/s
+Requirement already up-to-date: bcrypt>=3.1.3 in /usr/local/lib/python3.5/dist-packages (from paramiko>=2.0.0->netmiko>=2.1.1->napalm)
+Requirement already up-to-date: pynacl>=1.0.1 in /usr/local/lib/python3.5/dist-packages (from paramiko>=2.0.0->netmiko>=2.1.1->napalm)
+Requirement already up-to-date: cryptography>=1.5 in /usr/local/lib/python3.5/dist-packages (from paramiko>=2.0.0->netmiko>=2.1.1->napalm)
+Requirement already up-to-date: pyasn1>=0.1.7 in /usr/local/lib/python3.5/dist-packages (from paramiko>=2.0.0->netmiko>=2.1.1->napalm)
+Collecting selectors2>=2.0.1 (from ncclient>=0.5.4->junos-eznc>=2.1.5->napalm)
+  Downloading https://files.pythonhosted.org/packages/c9/89/8a07d6d6c78422c5151f68453e9741af4cd82bebcfa73923f73b3bdbef0d/selectors2-2.0.1-py2.py3-none-any.whl
+Requirement already up-to-date: idna<2.8,>=2.5 in /usr/local/lib/python3.5/dist-packages (from requests>=2.7.0->pynxos==0.0.3->napalm)
+Collecting urllib3<1.24,>=1.21.1 (from requests>=2.7.0->pynxos==0.0.3->napalm)
+  Downloading https://files.pythonhosted.org/packages/bd/c9/6fdd990019071a4a32a5e7cb78a1d92c53851ef4f56f62a3486e6a7d8ffb/urllib3-1.23-py2.py3-none-any.whl (133kB)
+    100% |################################| 143kB 1.5MB/s
+Collecting chardet<3.1.0,>=3.0.2 (from requests>=2.7.0->pynxos==0.0.3->napalm)
+  Downloading https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl (133kB)
+    100% |################################| 143kB 1.1MB/s
+Collecting certifi>=2017.4.17 (from requests>=2.7.0->pynxos==0.0.3->napalm)
+  Downloading https://files.pythonhosted.org/packages/df/f7/04fee6ac349e915b82171f8e23cee63644d83663b34c539f7a09aed18f9e/certifi-2018.8.24-py2.py3-none-any.whl (147kB)
+    100% |################################| 153kB 518kB/s
+Requirement already up-to-date: asn1crypto>=0.21.0 in /usr/local/lib/python3.5/dist-packages (from cryptography>=1.5->paramiko>=2.0.0->netmiko>=2.1.1->napalm)
+Building wheels for collected packages: napalm, future, pyeapi, pyIOSXR, pynxos, MarkupSafe, ncclient
+  Running setup.py bdist_wheel for napalm ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-jg49yoob/napalm/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" bdist_wheel -d /tmp/tmp7upj78cspip-wheel- --python-tag cp35:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for napalm
+  Running setup.py clean for napalm
+  Running setup.py bdist_wheel for future ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-jg49yoob/future/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" bdist_wheel -d /tmp/tmpplfyeuuspip-wheel- --python-tag cp35:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for future
+  Running setup.py clean for future
+  Running setup.py bdist_wheel for pyeapi ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-jg49yoob/pyeapi/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" bdist_wheel -d /tmp/tmpp83fjfjppip-wheel- --python-tag cp35:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for pyeapi
+  Running setup.py clean for pyeapi
+  Running setup.py bdist_wheel for pyIOSXR ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-jg49yoob/pyIOSXR/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" bdist_wheel -d /tmp/tmpdvxeahyfpip-wheel- --python-tag cp35:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for pyIOSXR
+  Running setup.py clean for pyIOSXR
+  Running setup.py bdist_wheel for pynxos ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-jg49yoob/pynxos/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" bdist_wheel -d /tmp/tmpaz332pzqpip-wheel- --python-tag cp35:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for pynxos
+  Running setup.py clean for pynxos
+  Running setup.py bdist_wheel for MarkupSafe ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-jg49yoob/MarkupSafe/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" bdist_wheel -d /tmp/tmp08pnjwcepip-wheel- --python-tag cp35:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for MarkupSafe
+  Running setup.py clean for MarkupSafe
+  Running setup.py bdist_wheel for ncclient ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-jg49yoob/ncclient/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" bdist_wheel -d /tmp/tmphpbgpfkupip-wheel- --python-tag cp35:
+  /usr/lib/python3.5/distutils/dist.py:261: UserWarning: Unknown distribution option: 'python_requires'
+    warnings.warn(msg)
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for ncclient
+  Running setup.py clean for ncclient
+Failed to build napalm future pyeapi pyIOSXR pynxos MarkupSafe ncclient
+Installing collected packages: setuptools, future, MarkupSafe, jinja2, netaddr, pyeapi, lxml, pyIOSXR, selectors2, ncclient, junos-eznc, urllib3, chardet, certifi, requests, pynxos, napalm
+  Found existing installation: setuptools 20.7.0
+    Not uninstalling setuptools at /usr/lib/python3/dist-packages, outside environment /usr
+  Running setup.py install for future ... done
+  Running setup.py install for MarkupSafe ... done
+  Running setup.py install for pyeapi ... done
+  Running setup.py install for pyIOSXR ... done
+  Running setup.py install for ncclient ... done
+  Running setup.py install for pynxos ... done
+  Running setup.py install for napalm ... done
+Successfully installed MarkupSafe-1.0 certifi-2018.8.24 chardet-3.0.4 future-0.16.0 jinja2-2.10 junos-eznc-2.2.0 lxml-4.2.5 napalm-2.3.2 ncclient-0.6.2 netaddr-0.7.19 pyIOSXR-0.53 pyeapi-0.8.2 pynxos-0.0.3 requests-2.19.1 selectors2-2.0.1 setuptools-40.2.0 urllib3-1.23
+You are using pip version 8.1.1, however version 18.0 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+root@NetworkAutomation-1:~#
+root@NetworkAutomation-1:~#
+root@NetworkAutomation-1:~# pip3 install -U simplejson
+Collecting simplejson
+  Downloading https://files.pythonhosted.org/packages/e3/24/c35fb1c1c315fc0fffe61ea00d3f88e85469004713dab488dee4f35b0aff/simplejson-3.16.0.tar.gz (81kB)
+    100% |################################| 81kB 644kB/s
+Building wheels for collected packages: simplejson
+  Running setup.py bdist_wheel for simplejson ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-q8ijcqay/simplejson/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" bdist_wheel -d /tmp/tmp9nlm_x_jpip-wheel- --python-tag cp35:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for simplejson
+  Running setup.py clean for simplejson
+Failed to build simplejson
+Installing collected packages: simplejson
+  Running setup.py install for simplejson ... done
+Successfully installed simplejson-3.16.0
+You are using pip version 8.1.1, however version 18.0 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+root@NetworkAutomation-1:~#

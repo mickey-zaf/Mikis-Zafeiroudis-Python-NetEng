@@ -1,0 +1,6 @@
+vlan 66
+ name VLAN_66
+!
+router eigrp 1
+ network 0.0.0.0 255.255.255.255
+!
